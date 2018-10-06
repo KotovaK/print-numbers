@@ -6,6 +6,7 @@ VERSION = "2.0"
 # sys.argv - list of arguments, example ['print-numbers.py', 'arg1', 'arg2', ...]
 # sys.argv[0] - is the name of the python file
 PROGRAM_NAME = sys.argv[0]
+reverse_order = False
 
 if "-h" in sys.argv:
     library.print_help(PROGRAM_NAME)
@@ -13,5 +14,9 @@ if "-h" in sys.argv:
 if "-v" in sys.argv:
     library.print_version(PROGRAM_NAME, VERSION)
 
+if "-r" in sys.argv:
+    reverse_order = True
+    sys.argv.remove('-r') 
+
 # sys.argv[1] is string type, we need to convert to integer type using int() function
-library.print_numbers(int(sys.argv[1]))
+library.print_numbers(int(sys.argv[1]), reverse_order)
