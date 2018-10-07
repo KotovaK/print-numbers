@@ -2,7 +2,7 @@ import sys
 import library
 # 't' means test, t-0.1 test version 0.1
 
-VERSION = "2.0"
+VERSION = "3.0"
 # sys.argv - list of arguments, example ['print-numbers.py', 'arg1', 'arg2', ...]
 # sys.argv[0] - is the name of the python file
 PROGRAM_NAME = sys.argv[0]
