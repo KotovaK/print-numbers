@@ -8,7 +8,7 @@ VERSION = "2.0"
 PROGRAM_NAME = sys.argv[0]
 reverse_order = False
 
-if "-h" in sys.argv:
+if "-h" in sys.argv or len(sys.argv) == 1:
     library.print_help(PROGRAM_NAME)
 
 if "-v" in sys.argv:
